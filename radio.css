@@ -1,0 +1,40 @@
+body {
+    margin:30px;
+    font-size:18px;
+  }
+  
+  /* container */
+  label {
+    display:block;
+    margin-bottom:4px;
+    position: relative; /* to contain absolute elements */
+    padding-left:30px; /* free space for custom radio button */
+    cursor: pointer;
+  }
+  /* hide default radio button  */
+  label input[type=radio] {
+    position: absolute; /* prevent taking any space */
+    /* cross-browser hidingg */
+    opactiy: 0;
+    width:0; 
+    height:0;
+  }
+  /* custom radio button */
+  label span {
+    position: absolute;
+    /* position to the free space in <label> */
+    top:0;
+    left:0;
+    width:20px; 
+    height:20px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: .3s background-color; /* slight transition */
+  }
+  /* the check icon */
+  label span:after {
+    content: "";
+    position: absolute;
+    display: none;
+    
+    /* middle */
